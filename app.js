@@ -374,4 +374,38 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Board section found:', boardSection);
     
     console.log('BCC IIT Delhi website with Board section initialized successfully!');
+
+    // Senior Team collapsible functionality
+    const seniorTeamToggle = document.getElementById('senior-team-toggle');
+    const seniorTeamContent = document.getElementById('senior-team-content');
+    
+    if (seniorTeamToggle && seniorTeamContent) {
+        // Set initial collapsed state
+        seniorTeamToggle.classList.add('collapsed');
+        seniorTeamContent.classList.add('collapsed');
+        
+        // Add click event listener
+        seniorTeamToggle.addEventListener('click', function() {
+            this.classList.toggle('collapsed');
+            seniorTeamContent.classList.toggle('collapsed');
+        });
+    }
 });
+
+// Function to toggle initiative cards collapse/expand
+function toggleInitiative(header) {
+    const card = header.closest('.initiative-card');
+    const body = card.querySelector('.initiative-card__body');
+    const toggle = header.querySelector('.initiative-card__toggle');
+    
+    // Toggle the collapsed class
+    card.classList.toggle('collapsed');
+    body.classList.toggle('collapsed');
+    
+    // Update the toggle symbol
+    if (card.classList.contains('collapsed')) {
+        toggle.textContent = '+';
+    } else {
+        toggle.textContent = '−';
+    }
+}

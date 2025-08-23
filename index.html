@@ -45,10 +45,10 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero__content">
-                <h1 class="hero__title">Business and Consulting Club, IIT Delhi</h1>
+                <h1 class="hero__title">Business and Consulting Club</h1>
                 <p class="hero__subtitle">IIT Delhi's premier undergraduate business organization</p>
-                <p class="hero__description">BCC is organized into three initiatives: Finance, Consulting, and Entrepreneurship. Once invited to join BCC, we develop members' skills and prepare them for the workplace through our intensive, semester-long, Board Education Program.</p>
-                <a href="#initiatives" class="btn btn--primary hero__cta">Explore Initiatives</a>
+                <p class="hero__description">BnC covers three fields: Finance, Consulting, and Entrepreneurship. We develop our members' skills and prepare them for the workplace through thought provoking seminars and intense competitions</p>
+                <a href="#initiatives" class="btn btn--primary hero__cta">Know More</a>
             </div>
         </div>
     </section>
@@ -59,13 +59,14 @@
     <!-- Initiatives Section -->
     <section id="initiatives" class="initiatives">
         <div class="container">
-            <h2 class="section__title">Flagship Events</h2>
+            <h2 class="section__title_light">What we do</h2>
             <div class="initiatives__grid">
-                <div class="initiative-card">
-                    <div class="initiative-card__header initiative-card__header--finance">
+                <div class="initiative-card collapsed">
+                    <div class="initiative-card__header initiative-card__header--finance" onclick="toggleInitiative(this)">
                         <h3 class="initiative-card__title">Flagship Events</h3>
+                        <span class="initiative-card__toggle">+</span>
                     </div>
-                    <div class="initiative-card__body">
+                    <div class="initiative-card__body collapsed">
                         <p class="initiative-card__description">The Events Vertical at BnC is where the excitement happens — a space designed to push your boundaries, test your creativity, and give you a taste of real-world business in fun and competitive formats. From fast-paced challenges to high-stakes simulations and inspiring speaker sessions, this is where you get to learn, compete, and grow — all while having a great time with your peers.</p>
                         <ul class="initiative-card__activities">
                             <li>Guestimate League – Crack fun, fast-paced guesstimation rounds.</li>
@@ -76,11 +77,12 @@
                     </div>
                 </div>
 
-                <div class="initiative-card">
-                    <div class="initiative-card__header initiative-card__header--consulting">
+                <div class="initiative-card collapsed">
+                    <div class="initiative-card__header initiative-card__header--consulting" onclick="toggleInitiative(this)">
                         <h3 class="initiative-card__title">Corporate Comms</h3>
+                        <span class="initiative-card__toggle">+</span>
                     </div>
-                    <div class="initiative-card__body">
+                    <div class="initiative-card__body collapsed">
                         <p class="initiative-card__description">The vertical connects the club with consulting firms, VCs, companies, and consulting bodies of other institutes, creating collaborations that enrich our activities</p>
                         <ul class="initiative-card__activities">
                             <li>The team reaches out to companies for live projects, workshops, and speaker sessions to give students real-world exposure</li>
@@ -90,11 +92,12 @@
                     </div>
                 </div>
 
-                <div class="initiative-card">
-                    <div class="initiative-card__header initiative-card__header--entrepreneurship">
+                <div class="initiative-card collapsed">
+                    <div class="initiative-card__header initiative-card__header--entrepreneurship" onclick="toggleInitiative(this)">
                         <h3 class="initiative-card__title">Startup Consulting</h3>
+                        <span class="initiative-card__toggle">+</span>
                     </div>
-                    <div class="initiative-card__body">
+                    <div class="initiative-card__body collapsed">
                         <p class="initiative-card__description">We partner with early-stage ventures to address strategic and operational challenges.</p>
                         <ul class="initiative-card__activities">
                             <li>Through real projects, members gain hands-on experience in market analysis, business models, and growth strategies while making tangible impact</li>
@@ -258,10 +261,13 @@
 
             <!-- Senior Team -->
             <div class="team__section">
-                <h3 class="team__section-title">Senior Team</h3>
+                <h3 class="team__section-title team__section-title--collapsible" id="senior-team-toggle">
+                    Senior Team
+                    <span class="team__toggle-icon">▼</span>
+                </h3>
                 
                 <!-- Startup Coordinators -->
-                <div class="team__subsection">
+                <div class="team__subsection team__collapsible-content" id="senior-team-content">
                     <div class="board__grid">
                         <div class="board-member">
                             <div class="board-member__avatar">
@@ -453,6 +459,8 @@
                         </div>
                     </div>
                 </div>
+                <!-- End of collapsible content -->
+            </div>
 
             </div>
         </div>
