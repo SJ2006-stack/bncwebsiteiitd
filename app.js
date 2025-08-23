@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
 
     // Observe elements for animation
-    const animateElements = document.querySelectorAll('.initiative-card, .benefit-item, .board-member, .section__title');
+    const animateElements = document.querySelectorAll('.initiative-card, .benefit-item, .board-member, .collaboration-partner, .section__title');
     animateElements.forEach(el => {
         observer.observe(el);
     });
@@ -173,6 +173,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .initiative-card,
         .benefit-item,
         .board-member,
+        .collaboration-partner,
         .section__title {
             opacity: 0;
             transform: translateY(30px);
@@ -203,6 +204,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .initiative-card,
             .benefit-item,
             .board-member,
+            .collaboration-partner,
             .section__title {
                 transition: none;
             }
