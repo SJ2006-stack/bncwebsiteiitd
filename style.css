@@ -466,7 +466,7 @@ pre code {
 
 .btn:disabled {
   opacity: 0.5;
-  cursor: not-allowed;
+  cursor: not-not allowed;
 }
 
 /* Form elements */
@@ -854,10 +854,17 @@ body {
   transition: all var(--duration-fast) var(--ease-standard);
 }
 
-/* Hero Section - Dark with gradient (only hero stays dark) */
+/* Hero Section - Dark with gradient + background image */
 .hero {
   min-height: 100vh;
-  background: linear-gradient(135deg, var(--theme-black) 0%, var(--theme-dark-red) 50%, var(--theme-black) 100%) !important;
+
+  /* Layered: image + brand gradient.
+     If your CSS file is in a subfolder like /css, change to ../images/iitd2.jpg */
+  background:
+    url('images/iitd2.jpg') center/cover no-repeat,
+    linear-gradient(135deg, var(--theme-black) 0%, var(--theme-dark-red) 50%, var(--theme-black) 100%) !important;
+  background-blend-mode: multiply; /* keeps brand tint readable over the photo */
+
   display: flex;
   align-items: center;
   padding-top: 80px;
@@ -867,11 +874,10 @@ body {
 .hero::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at 30% 50%, rgba(220, 20, 60, 0.1) 0%, transparent 50%);
+  inset: 0;
+  background:
+    radial-gradient(circle at 30% 50%, rgba(220, 20, 60, 0.12) 0%, transparent 55%),
+    rgba(0, 0, 0, 0.18);
 }
 
 .hero__content {
